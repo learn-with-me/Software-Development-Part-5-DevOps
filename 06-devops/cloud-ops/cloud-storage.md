@@ -12,10 +12,10 @@
 
 * Google Cloud
 * Amazon Web Services
-  * S3 - Durable object storage for all types of data
+  * S3 \(Simple Storage Service\) - Durable object storage for all types of data
   * Glacier - Archival storage for infrequently accessed data
   * EBS \(Elastic Block Store\) - Block storage for use with Amazon EC2
-  * EFS - File storage for use with Amazon EC2
+  * EFS \(Elastic File Store\) - File storage for use with Amazon EC2
 * Microsoft Azure
 
 ### Storage Types
@@ -47,6 +47,4 @@ In this example we have S3 + EMR \(Elastic Map Reduce\). AWS is form of Hadoop. 
 ### Example: Backup and Recovery
 
 In this example, Media server with cloud connector communicates with AWS Direct Connect via HTTPS/API, which in-turn communicates with S3, S3-IA and Amazon Glacier.
-
-
 
