@@ -37,6 +37,7 @@
 * [Cloud Ops](06-devops/cloud-ops.md)
   * [Cloud Computing](06-devops/cloud-ops/cloud-computing.md)
   * [Cloud Storage](06-devops/cloud-ops/cloud-storage.md)
+  * [Google Cloud Platform](06-devops/cloud-ops/google-cloud-platform.md)
 * [Local Development](local-development/README.md)
   * [Setting up Linux](local-development/setting-up-linux/README.md)
     * [Linux Docker](local-development/setting-up-linux/linux-docker.md)
