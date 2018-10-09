@@ -46,6 +46,14 @@ A cloud computing service provides the below five important traits
 
 * IAM
 * StackDriver
-* 
+* Developer Tools
+  * Cloud SDK
+  * Cloud Shell
+  * Android Studio
+  * IntelliJ IDEA
+  * Cloud Source Repositories
+  * Debugging, tracing, analyzing
+  * Logging and Monitoring
+
 
 
