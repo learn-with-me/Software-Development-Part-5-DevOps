@@ -42,6 +42,12 @@ A cloud computing service provides the below five important traits
   * Speech API
   * Translate API
 
+#### Security Features
+
+* IAM
+* Quotas
+* Service Accounts \(authentication mechanism for services
+
 #### Other features
 
 * IAM
