@@ -42,9 +42,10 @@ A cloud computing service provides the below five important traits
   * Speech API
   * Translate API
 
+#### Other features
 
-
-#### 
-
+* IAM
+* StackDriver
+* 
 
 
