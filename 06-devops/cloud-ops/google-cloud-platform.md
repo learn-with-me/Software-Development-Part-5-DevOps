@@ -46,7 +46,7 @@ A cloud computing service provides the below five important traits
 
 * IAM
 * Quotas
-* Service Accounts \(authentication mechanism for services
+* Service Accounts \(authentication mechanism for services\)
 
 #### Other features
 
