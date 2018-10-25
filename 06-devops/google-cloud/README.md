@@ -1,5 +1,7 @@
 # Google Cloud Platform \(GCP\)
 
+Its not fair to say this section cover a lot about every aspect of GCP. GCP is huge. We'll have tailored information on how to get started, what and where to look at.
+
 #### Interacting with GCP
 
 1. UI \([https://console.cloud.google.com](https://console.cloud.google.com/%29%29%29%29\)  
