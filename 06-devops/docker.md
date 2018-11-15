@@ -9,6 +9,13 @@
 * Auto-update capability
 * No additional software required such as VirtualBox
 
+##### Competitor/Alternative to Docker
+
+```
+Rocket by CoreOS
+https://coreos.com/rkt/
+```
+
 ##### Workflow
 
 ```
@@ -48,23 +55,31 @@ Docker Engine takes the image format and runs the software for you.
 ##### Process
 
 ```
-Dockerfile build the Docker Image, that contains all the softwares and dependencies; even Node.js. Which means you do
-not need to install Node.js on your production server.
+Dockerfile build the Docker Image, that contains all the softwares and dependencies; even Node.js.
+Which means you do not need to install Node.js on your production server.
 
 You run containers from an Image. A container consists of Web Server, Host OS, Docker Engine and Apps
 ```
 
+### Core elements of Docker Ecosystem
+
 ##### Docker Engine/Host
 
+Docker Engine is comprised of runtime and packaging tool. It must be installed on the hosts that run Docker.
+
 ```
-Just like JVM understands the class format, the Docker understands the image format. It takes the image format and runs
-the container for you.
+Just like JVM understands the class format, the Docker understands the image format. It takes the image
+format and runs the container for you.
 This is where the containers and Images reside.
 This is where we have Docker Daemon running.
 
-Note: Docker is a native Linux technology. It is built on concepts like cgroups, namespaces, etc. These inherently
-exist in Linux, so on OSX and Windows, you do have to run sort of a virtual machine.
+Note: Docker is a native Linux technology. It is built on concepts like cgroups, namespaces, etc.
+These inherently exist in Linux, so on OSX and Windows, you do have to run sort of a virtual machine.
 ```
+
+##### Docker Store/Hub
+
+Online cloud service where users can store and share their Docker images. Also known as Docker Hub.
 
 ##### Docker Toolbox
 
