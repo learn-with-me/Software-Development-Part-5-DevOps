@@ -101,6 +101,10 @@ Simples unit that you can interact with. You can create, deploy and delete pods.
     - Use Cases
         - Pod management: Running a ReplicaSet allows us to deploy a number of pods, and check their status as a single unit.
         - Scaling a ReplicaSets scales out the pods, and allows for the deployment to handle more traffic.
-- DaemonSets
-- Jobs
-- Services
+- DaemonSets - Ensures that all the nodes run a copy of specific pod. As nodes are added or removed from the cluster, a DaemonSet will add or remove the required pods. Deleting the DaemonSets will cleanpup all the pods it created.
+- Jobs - Supervisor process for pods carrying out batch jobs. Used to run individual processes that run once and complete successfully, example Cron job.
+- Services - Provides network connectivity to one or more pods in your cluster. Allow the communication between one set of deployments with another. Each service is assigned a unique IP address that never changes through the lifetime of the service. Pods are then configured to talk to the service and then rely on the service IP for any request that might be sent to the pod. Use a service to get two pods in two deployments to talk to each other. Using a pod IP to communicate is a bad choice since they can change at anytime.
+    - Internal Services - IP is only reachable only within the cluster
+    - External Services - endpoint available through node ip:port (NodePort)
+    - Load balancer - Exposes application to the interent
+
