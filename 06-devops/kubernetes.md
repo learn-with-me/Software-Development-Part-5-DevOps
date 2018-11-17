@@ -108,3 +108,35 @@ Simples unit that you can interact with. You can create, deploy and delete pods.
     - External Services - endpoint available through node ip:port (NodePort)
     - Load balancer - Exposes application to the interent
 
+
+### Organizing Applications
+- Labels - Used by K8s to identify attributes for objects. Key/Value pairs that are attached to objects like pods, services and deployment. Example: release, environment, tier
+- Selectors - used by kubectl command to list and filter objects on labels applied.
+    - Equality-based
+    - Set-based
+- Namespaces - used where there are many users and teams, and you want to allow teams to access resources, with accountability. Great way to divide cluster resources between users. Teams can have authentication within their own namespaces.
+
+### kubelet and kube-proxy
+
+##### kubelet
+The Kubernetes node agent that runs on each node.
+- Communicates with the API server to see if pods have been assigned to nodes
+- Executes pod containers via a container engine
+- Mounts and runs pod volumes and secrets
+- Executes health checks to identify pod/node status and reports back to the API server
+- **Important:** kubelet only manages containers that were created by the API server -- and not any container running on the node.
+
+##### Podspec
+YAML file that describes the pod.
+kubelet takes a set of Podspecs that are provided by the kube-apiserver and ensures that the containers described in those Podspecs are running and healthy.
+
+##### kube-proxy -- The Network Proxy
+Watches the API server for the addition and removal of services. Then for each new service, kube-proxy opens a randomly chosen port on a local node. Any connections made to that port are proxied back in corresponding pods.
+- Process that runs on all the worker nodes
+- Reflects services as defined on each node, and can do simple network stream or round-robin forwarding across a set of backends.
+- Service cluster IPs and ports are currently found through Docker-link compatible environment variables specifying ports opened by the service proxy
+
+###### kube-proxy modes
+- User Space mode
+- Iptables mode
+- Ipvs mode
