@@ -13,6 +13,7 @@
   * [Container](06-devops/container.md)
   * [Orchestration](06-devops/orchestration.md)
   * [Kubernetes](06-devops/kubernetes.md)
+  * [MicroServices](06-devops/microservices.md)
 * [Cloud Ops](06-devops/cloud-ops.md)
   * [Cloud Computing](06-devops/cloud-ops/cloud-computing.md)
   * [Cloud Storage](06-devops/cloud-ops/cloud-storage.md)
