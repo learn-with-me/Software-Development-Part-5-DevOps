@@ -2,12 +2,13 @@
 
 #### Sub Domain
 
-| Area | Description |
-| :--- | :--- |
-| Compute Engine | Virtual Machines |
-| App Engine | Paas for Apps and Backend. Supports Node.js, Java, Ruby, C\#, Go, Python and PHP |
-| Container Engine | Run containers on GCP |
-| Cloud Functions | Serverless environment to build and connect cloud services |
+```
+1. Compute Engine: Virtual Machines
+2. App Engine: Paas for Apps and Backend. Supports Node.js, Java, Ruby, C\#, Go, Python and PHP
+3. Container Engine: Run containers on GCP
+4. Cloud Functions: Serverless environment to build and connect cloud services 
+
+```
 
 #### App Engine
 
@@ -33,3 +34,6 @@ Use Standard unless flexible is really needed
 
 Comparison: [https://cloud.google.com/appengine/docs/the-appengine-environments](https://cloud.google.com/appengine/docs/the-appengine-environments)
 
+#### Container Engine
+
+Container Engine is hosted and managed Kubernetes
