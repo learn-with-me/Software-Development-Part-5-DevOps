@@ -14,6 +14,8 @@
   * [Orchestration](06-devops/orchestration.md)
   * [Kubernetes](06-devops/kubernetes.md)
   * [MicroServices](06-devops/microservices.md)
+  * [Build & Deploy Automation](06-devops/build-and-deploy-automation.md)
+  * [Load Balancing](06-devops/load-balancing.md)
 * [Cloud Ops](06-devops/cloud-ops.md)
   * [Cloud Computing](06-devops/cloud-ops/cloud-computing.md)
   * [Cloud Storage](06-devops/cloud-ops/cloud-storage.md)
