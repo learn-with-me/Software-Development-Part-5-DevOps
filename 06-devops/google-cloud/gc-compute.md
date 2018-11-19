@@ -1,6 +1,6 @@
 # Compute
 
-#### Sub Domain
+### Sub Domain
 
 ```
 1. Compute Engine: Virtual Machines
@@ -10,7 +10,7 @@
 
 ```
 
-#### App Engine
+### App Engine
 
 Allows developers to focus on writing code.
 
@@ -34,6 +34,6 @@ Use Standard unless flexible is really needed
 
 Comparison: [https://cloud.google.com/appengine/docs/the-appengine-environments](https://cloud.google.com/appengine/docs/the-appengine-environments)
 
-#### Container Engine
+### Container Engine
 
 Container Engine is hosted and managed Kubernetes
