@@ -55,10 +55,13 @@ It runs on bare metal, virtual machines, private datacenter and public cloud.
         - pod - containers of an application are tightly coupled in a pod. Pod is a smallest unit that can be scheduled for deployment with Kubernetes. The group of containers within pod share storage, linux namespace, IP addresses, etc
     - kube-proxy - process for network proxy and load balancer. Also handles network routing for TCP and UDP packets.
 
+### Hardware
 
 ##### Node
+Smallest unit of computing hardware in Kubernetes. It is a representation of single machine in your cluster. In most production systems, a node will likely be either a physical machine in a datacenter, or virtual machine hosted on a cloud provider like GCP. In theory, you can make a node out of almost anything.
+Thinking of a machine as a “node” allows us to insert a layer of abstraction. Simply view each machine as a set of CPU and RAM resources that can be utilized. In this way, any machine can substitute any other machine in a Kubernetes cluster.
+
 Serves as a worker machine in K8s cluster. 
-Kubernetes in production recommends atleast a three-node cluster
 
 ###### Requirements
 - A kubelet running
@@ -66,11 +69,32 @@ Kubernetes in production recommends atleast a three-node cluster
 - A kube-proxy process running
 - a process like supervisord
 
-##### Minikube
-Tool to run K8s locally. A light-weight K8s implementation that creates a VM on your local machine and deploys a simple cluster containing only one node.
+##### Cluster
+In Kubernetes, nodes pool together their resources to form a more powerful machine. When you deploy programs onto the cluster, it intelligently handles distributing work to the individual nodes for you. If any nodes are added or removed, the cluster will shift around work as necessary. It shouldn’t matter to the program, or the programmer, which individual machines are actually running the code.
+
+Kubernetes in production recommends atleast a three-node cluster
+
+##### Persistent Volumes
+Because programs running on your cluster aren’t guaranteed to run on a specific node, data can’t be saved to any arbitrary place in the file system. If a program tries to save data to a file for later, but is then relocated onto a new node, the file will no longer be where the program expects it to be.
+For this reason, the traditional local storage associated to each node is treated as a temporary cache to hold programs, but any data saved locally can not be expected to persist.
+
+To store data permanently, Kubernetes uses Persistent Volumes. While the CPU and RAM resources of all nodes are effectively pooled and managed by the cluster, persistent file storage is not. Instead, local or cloud drives can be attached to the cluster as a Persistent Volume. This can be thought of as plugging an external hard drive in to the cluster. `Persistent Volumes provide a file system that can be mounted to the cluster, without being associated with any particular node.`
+
+### Software
+
+##### Containers
+Programs running on Kubernetes are packaged as Linux containers. Containers are a widely accepted standard, so there are already many pre-built images that can be deployed on Kubernetes.
+
+Containerization allows you to create self-contained Linux execution environments. Any program and all its dependencies can be bundled up into a single file and then shared on the internet. Anyone can download the container and deploy it on their infrastructure with very little setup required.
+
+Creating a container can be done programmatically, allowing powerful CI and CD pipelines to be formed.
+
+Multiple programs can be added into a single container, but you should limit yourself to one process per container if at all possible. It’s better to have many small containers than one large one. If each container has a tight focus, updates are easier to deploy and issues are easier to diagnose.
 
 ##### Pods
-Simples unit that you can interact with. You can create, deploy and delete pods. It represents one running process on your cluster. If a pod dies for some reason, it will not be rescheduled. Always use higher-level constructs to manage and add stability to pods called controllers.
+Kubernetes doesn’t run containers directly; instead it wraps one or more containers into a higher-level structure called a pod. Any containers in the same pod will share the same resources and local network. Containers can easily communicate with other containers in the same pod as though they were on the same machine while maintaining a degree of isolation from others.
+
+Pod is a simplest unit that you can interact with. You can create, deploy and delete pods. It represents one running process on your cluster. If a pod dies for some reason, it will not be rescheduled. Always use higher-level constructs to manage and add stability to pods called controllers.
 
 `Don't use a pod directly. Use a controller instead like a deployment.`
 
@@ -87,6 +111,8 @@ Simples unit that you can interact with. You can create, deploy and delete pods.
 - Failed - All the container in the pod have exited and atleast one container has failed and returned a non-zero exit status.
 - CrashLoopBackOff - Container fails to start for some reason and K8s tries over and over and over again to start the pod.
 
+##### Minikube
+Tool to run K8s locally. A light-weight K8s implementation that creates a VM on your local machine and deploys a simple cluster containing only one node.
 
 ##### Controllers
 
