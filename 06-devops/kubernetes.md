@@ -3,7 +3,8 @@ Definition: Open source platform designed to automate deploying, scaling and ope
 Goal: to foster an ecosystem of components and tools that relieve the burden of running applications in public and private clouds.
 
 ```
-A platform to schedule and run containers on clusters of virtual machines.
+Containers package an application so it can be easily deployed to run in its own isolated environment.
+Kubernetes is a platform to schedule and run containers on clusters of virtual machines.
 It runs on bare metal, virtual machines, private datacenter and public cloud.
 ```
 
