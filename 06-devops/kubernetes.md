@@ -115,6 +115,8 @@ Pod is a simplest unit that you can interact with. You can create, deploy and de
 ##### Minikube
 Tool to run K8s locally. A light-weight K8s implementation that creates a VM on your local machine and deploys a simple cluster containing only one node.
 
+Minikube runs a Docker engine to be able to start containers. In order to access this Docker engine from your local machine using your local Docker client, you’ll need to set up the correct Docker environment with minikube docker-env.
+
 ##### Controllers
 
 ###### Benefits
