@@ -19,5 +19,13 @@ At core, Identity life cycle is broken into four parts:
 4. Deprovision
    1. Deactivate or delete a user to permanently remove access to any of your cloud applications
 
+##### What do we need?
+
+* Active Directory
+* SSO
+* Radius
+
+
+
 
 
