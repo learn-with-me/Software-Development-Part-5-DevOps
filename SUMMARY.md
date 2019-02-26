@@ -54,4 +54,7 @@
     * [Docker](local-development/how-to/docker.md)
   * [Tool Shop](local-development/tool-shop.md)
 * [Networking](networking.md)
+* [Identity Life Cycle](identity-life-cycle.md)
+  * [AWS IAM](identity-life-cycle/aws-iam.md)
+    * [Multi-factor Authentication](identity-life-cycle/aws-iam/multi-factor-authentication.md)
 
