@@ -40,13 +40,39 @@ Provisioner
 A tool to setup virtual environment, can be as simple as a shell script or Chef, Puppet or Ansible
 ```
 
+##### Installation
+
+```
+# MacOS
+$ brew cask install vagrant
+```
+
 ##### Steps to create a virtual machine
 
 ```
-> mkdir myvagrantproject
-> cd myvagrantproject
-> vagrant init bento/centos-7.3
-> vagrant up
+$ mkdir myvagrantproject
+$ cd myvagrantproject
+$ vagrant init bento/centos-7.3
+$ vagrant init hashicorp/precise64
+$ vagrant up
+# Note: By default Vagrant runs machines headless
+```
+
+##### Accessing/controlling the machine
+
+```
+$ vagrant ssh         # SSH into the box
+> uname -a            # Unix Name command to print the unix kernel name
+
+If you make a change to Vagrant configuration file, you can reload configuration by:
+$ vagrant reload
+$ vagrant provision    # Use this to provision the changes to the machine
+
+Run from the folder that contains the Vagrantfile. This way Vagrant knows about the VM
+$ vagrant suspend     # Suspends a machine
+$ vagrant resume      # Revive the environment
+$ vagrant halt        # Shuts down the VM. Doesn't take space in host system but takes time to resume
+$ vagrant destroy     #
 ```
 
 

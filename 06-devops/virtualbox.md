@@ -120,5 +120,12 @@ Note: Auto-capture keyboard will be ON by default when you start your virtual bo
 To exit, press host key. On Mac, it is left-Command key. Windows -> right-Ctrl key
 ```
 
+##### Cheatsheet
+
+```
+$ vboxmanage list runningvms        # list out running VMs
+$ vboxmanage list vms               # list out all the VMs
+```
+
 
 
