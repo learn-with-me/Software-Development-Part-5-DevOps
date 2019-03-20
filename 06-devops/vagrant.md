@@ -50,8 +50,7 @@ $ brew cask install vagrant
 ##### Steps to create a virtual machine
 
 ```
-$ mkdir myvagrantproject
-$ cd myvagrantproject
+Go to the desired folder
 $ vagrant init bento/centos-7.3
 $ vagrant init hashicorp/precise64
 $ vagrant up
@@ -72,7 +71,27 @@ Run from the folder that contains the Vagrantfile. This way Vagrant knows about 
 $ vagrant suspend     # Suspends a machine
 $ vagrant resume      # Revive the environment
 $ vagrant halt        # Shuts down the VM. Doesn't take space in host system but takes time to resume
-$ vagrant destroy     #
+$ vagrant destroy -f  # Destry the VM completely. -f flag to skip asking confirmation
+```
+
+##### Vagrant Boxes
+
+```
+$ vagrant box -h          # Help on Vagrant commands
+$ vagrant box list        # Lists all the boxes currently available locally
+```
+
+##### Synced Folders
+
+Two standard ways to shared files between Guest and Host:
+
+* Shared folders \(most popular\)
+* rsync \(better approach, by making a copy on change of file\)
+
+##### Look at
+
+```
+https://app.vagrantup.com/pricing
 ```
 
 
