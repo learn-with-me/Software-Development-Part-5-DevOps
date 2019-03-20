@@ -53,6 +53,7 @@ $ brew cask install vagrant
 Go to the desired folder
 $ vagrant init bento/centos-7.3
 $ vagrant init hashicorp/precise64
+$ vagrant init ubuntu/trusty64 --minimal
 $ vagrant up
 # Note: By default Vagrant runs machines headless
 ```
@@ -86,7 +87,12 @@ $ vagrant box list        # Lists all the boxes currently available locally
 Two standard ways to shared files between Guest and Host:
 
 * Shared folders \(most popular\)
-* rsync \(better approach, by making a copy on change of file\)
+  * Files reside only on host
+* rsync \(better approach\)
+  * Syncs files by making a copy on change of file
+  * Files are on both host as well as guest
+  * Copy is only one way, from host to guest VM
+  * Run `vagrant rsync-auto` for vagrant to watch for file changes in host machine
 
 ##### Look at
 
