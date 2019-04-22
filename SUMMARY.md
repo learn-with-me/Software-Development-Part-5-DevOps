@@ -59,4 +59,5 @@
     * [Multi-factor Authentication](identity-life-cycle/aws-iam/multi-factor-authentication.md)
 * [Security](security.md)
 * [Terminal Tricks](terminal-tricks.md)
+* [Monitoring](monitoring.md)
 
